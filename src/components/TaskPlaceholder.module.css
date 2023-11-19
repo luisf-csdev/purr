@@ -21,7 +21,7 @@
     border-top: 1px solid var(--gray-400);
     border-radius: 8px;
 
-    animation: showPlaceholder 0.5s;
+    animation: showPlaceholder 0.4s;
 }
 
 .placeholder svg {

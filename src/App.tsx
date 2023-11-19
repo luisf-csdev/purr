@@ -6,6 +6,7 @@ import { TaskAdd } from './components/TaskAdd'
 import { TaskCard, TaskType } from './components/TaskCard'
 import { TaskPlaceholder } from './components/TaskPlaceholder'
 import { TaskStats } from './components/TaskStats'
+import { TaskDeleteModal, TaskToDeleteType } from './components/TaskDeleteModal'
 
 import styles from './App.module.css'
 
@@ -18,6 +19,11 @@ export function App() {
     : []
 
   const [tasks, setTasks] = useState(savedTasks)
+  const [deleteTaskModal, setDeleteTaskModal] = useState<TaskToDeleteType>({
+    id: '',
+    content: '',
+    state: false,
+  })
 
   const totalTasks = tasks.length
 
@@ -49,6 +55,18 @@ export function App() {
       setTaskItemOnLocalStorage(tasksWithoutDeletedOne)
 
       return tasksWithoutDeletedOne
+    })
+
+    toggleDeleteTaskModal()
+  }
+
+  function toggleDeleteTaskModal(id = '', content = '') {
+    setDeleteTaskModal(({ state }) => {
+      return {
+        state: !state,
+        content,
+        id,
+      }
     })
   }
 
@@ -85,11 +103,18 @@ export function App() {
               <TaskCard
                 key={task.id}
                 task={task}
-                onTaskDelete={deleteTask}
+                onTaskDelete={toggleDeleteTaskModal}
                 onTaskToggle={toggleTask}
               />
             ))}
           </div>
+        )}
+        {deleteTaskModal.state && (
+          <TaskDeleteModal
+            onCloseTaskDeleteModal={toggleDeleteTaskModal}
+            onTaskDeleteConfirmation={deleteTask}
+            task={deleteTaskModal}
+          />
         )}
       </div>
     </div>

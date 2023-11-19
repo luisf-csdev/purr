@@ -10,7 +10,7 @@ export interface TaskType {
 
 interface TaskCardType {
   task: TaskType
-  onTaskDelete: (id: string) => void
+  onTaskDelete: (id: string, content: string) => void
   onTaskToggle: (id: string) => void
 }
 
@@ -20,7 +20,7 @@ export function TaskCard({ task, onTaskDelete, onTaskToggle }: TaskCardType) {
   }
 
   function handleDeleteTask() {
-    onTaskDelete(task.id)
+    onTaskDelete(task.id, task.content)
   }
 
   return (
