@@ -32,6 +32,7 @@
 .task {
     display: flex;
     align-items: flex-start;
+    width: 100%;
     gap: 1rem;
 }
 

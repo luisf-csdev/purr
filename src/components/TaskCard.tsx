@@ -54,6 +54,7 @@ export function TaskCard({
   }
 
   function handleEditKeyDown(event: KeyboardEvent<HTMLInputElement>) {
+    event.stopPropagation()
     if (event.key === 'Enter') {
       handleEditTask()
     }

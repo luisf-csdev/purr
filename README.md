@@ -1,99 +1,96 @@
-<h1 align="center">purr.</h1>
-<div align="center">
-    <img src="https://img.shields.io/github/license/luisf-csdev/purr">
-    <img src="https://img.shields.io/github/stars/luisf-csdev/purr">
-    <img src="https://img.shields.io/github/forks/luisf-csdev/purr">
+<div align="center"> 
+
+# purr. 🐾
+
 </div>
-<p align="center"> 📃 Minimalist to-do list  ✅</p>
+
+<div align="center">
+    <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+    <img src="https://img.shields.io/badge/status-active-success.svg" />
+    <img src="https://img.shields.io/github/issues/luisf-csdev/purr" />
+    <img src="https://img.shields.io/github/forks/luisf-csdev/purr" />
+</div>
+
+<p align="center">A meownimalistic to-do list for funny daily task management. 📝✨</p>
 
 <h4 align="center">
     <a href="#-features">Features</a> •
-    <a href="#-hotkeys">Hotkeys</a> •
-    <a href="#try-it-yourself">App Demo</a> •
-    <a href="#-prerequisites">Prerequisites</a> •
-    <a href="#-clone-repository">Clone Repository</a> •
-    <a href="#-stacks">Stacks</a> •
-    <a href="#excelsior-code--by-luís-felipe">Author</a>
+    <a href="#-how-it-works">How It Works</a> •
+    <a href="#try-it-yourself">Try It Out</a> •
+    <a href="#-excelsior-code--by-luís-felipe">Author</a>
 </h4>
 <br>
 
 ## 📌 Features
-- [x] Clean design
-- [x] Input autofocused
-- [x] Tasks saved on local storage
-- [x] Drag and drop library to reorder the tasks
-- [x] Trash can to erase tasks
-- [x] Hotkeys implemented
+- [x] Simplistic and adorable cat-themed design.
+- [x] Input field is autofocused to quickly jot down tasks.
+- [x] Tasks persist between sessions with local storage.
+- [x] Reorder tasks with a simple drag-and-drop interface.
+- [x] Easily delete tasks.
+- [x] Edit tasks on the fly – because plans change!
+- [x] Hotkeys for efficient task management.
 <br>
 
 ## ⌨️ Hotkeys 
-- [x] Enter: add a task
-- [x] Del: open delete tasks pop-up
-- [x] Esc: exit pop-ups
+- [x] `Enter`: Focus the new task box.
+- [x] `Esc`: Exit any pop-up window.
+- [x] `Del`: Confirm task deletion.
+- [x] `Double Click`: Edits the selected task.
 <br>
 
-## [✅TRY IT YOURSELF✅](https://todo-list-reactredux.netlify.app/)
+## [🐈‍⬛ Start your meows 🐈‍⬛](https://purr-dot.web.app/)
 <div align="center">
-    <img alt="gif-1" width="450rem" src="./github/to-do-list-gif1.gif"><br>
-    <img alt="gif-2" width="450rem" src="./github/to-do-list-gif2.gif">
-    <img alt="gif 3" width="450rem" src="./github/to-do-list-gif3.gif">
+    <img alt="purr-pic" width="450rem" src="./github/purr-pic.png"><br>
+    <img alt="purr-gif1" width="450rem" src="./github/purr-gif1.gif">
+    <img alt="purr-gif2" width="160rem" src="./github/purr-gif2.gif">
 </div>
 
 ## 
 <br>
 
-## 💾 Prerequisites
-You'll need to have the following tools installed on your machine:
+## 💾 Getting Started
+Ensure you have the following installed to use purr:
 - [GIT](https://git-scm.com/)
-- [Node.js](https://nodejs.org/)
+- [Node.js](https://nodejs.org/en/)
 
-Also, use your preferred code editor.
-<br>
+- [pnpm](https://pnpm.io/) --optional
 
-## 🪢 Clone Repository
+Clone the repository and jump straight into task management:
 ```bash
-# execute the git clone command
-git clone https://github.com/luisf-csdev/chat-rooms.git
+# Clone the repository
+git clone https://github.com/luisf-csdev/purr.git
 
-# enter the project folder
-cd to-do-list
+# Navigate to the project directory
+cd purr
 
-# install the dependencies
+# Install dependencies
 npm install
+## or
+pnpm install
 
-# then run the start script 
-npm start
+# Start the application
+npm run dev 
+## or 
+pnpm dev
 
-# the app will start in port:3000 - access <http://localhost:3000>
+# purr will be running on <http://localhost:5173>
 ```
 <br>
 
-## 💽 Stacks
-<span>
-    <a href='https://reactjs.org/'>
-        <img alt="luisf-react" height="50rem"
-            src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" 
-        />
-    </a>
-    <a href='https://redux.js.org/'>
-        <img alt="luisf-node" height="50rem"
-            src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" 
-        />
-    <a href='https://nodejs.org/'>
-        <img alt="luisf-node" height="50rem"
-            src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" 
-        />
-    </a>   
-    <a href='https://www.javascript.com/'>
-        <img alt="luisf-js" height="50rem" 
-            src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" 
-        />
-    </a>
-</span><br><br><br>
+## 💽 Tech Stack
+<div>
+    <img alt="React" height="50rem" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+    <img alt="TypeScript" height="50rem" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+    <img alt="Node.js" height="50rem" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+    <img alt="Vite" height="50rem" src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" />
+</div>
+<br>
 
-<hr>
+##
+
 <div align="center">
-<h4>Excelsior code 💙 by Luís Felipe</h4>
- 
-[🪐 See my LinkedIn 🪐](https://www.linkedin.com/in/luisf-csdev/)
+
+#### Excelsior code 💜 by Luís Felipe
+
+[🪐 Take a look at my LinkedIn 🪐](https://www.linkedin.com/in/luisf-csdev/)
 </div>
