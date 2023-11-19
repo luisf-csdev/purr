@@ -1,5 +1,11 @@
 import { useState } from 'react'
 import { v4 as uuid } from 'uuid'
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from '@hello-pangea/dnd'
 
 import { Header } from './components/Header'
 import { TaskAdd } from './components/TaskAdd'
@@ -86,6 +92,33 @@ export function App() {
     })
   }
 
+  function editTask(id: string, editedContent: string) {
+    setTasks((tasks) => {
+      const updatedTasks = tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, content: editedContent }
+        }
+
+        return task
+      })
+
+      setTaskItemOnLocalStorage(updatedTasks)
+
+      return updatedTasks
+    })
+  }
+
+  function handleOnDragEnd(dropResult: DropResult) {
+    if (!dropResult.destination) return
+
+    const reorderedTasks = Array.from(tasks)
+    const [reorderedItem] = reorderedTasks.splice(dropResult.source.index, 1)
+    reorderedTasks.splice(dropResult.destination.index, 0, reorderedItem)
+
+    setTasks(reorderedTasks)
+    setTaskItemOnLocalStorage(reorderedTasks)
+  }
+
   return (
     <div>
       <div className={styles.headerAndTaskAddWrapper}>
@@ -98,16 +131,42 @@ export function App() {
         {tasks.length === 0 ? (
           <TaskPlaceholder />
         ) : (
-          <div className={styles.taskContainer}>
-            {tasks.map((task) => (
-              <TaskCard
-                key={task.id}
-                task={task}
-                onTaskDelete={toggleDeleteTaskModal}
-                onTaskToggle={toggleTask}
-              />
-            ))}
-          </div>
+          <DragDropContext onDragEnd={handleOnDragEnd}>
+            <Droppable droppableId="tasks">
+              {(provided) => (
+                <div
+                  {...provided.droppableProps}
+                  ref={provided.innerRef}
+                  className={styles.taskList}
+                >
+                  {tasks.map((task, index) => (
+                    <Draggable
+                      key={task.id}
+                      draggableId={task.id}
+                      index={index}
+                    >
+                      {(provided) => (
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                        >
+                          <TaskCard
+                            task={task}
+                            index={index}
+                            onTaskDelete={toggleDeleteTaskModal}
+                            onTaskToggle={toggleTask}
+                            onTaskEdit={editTask}
+                          />
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
+                </div>
+              )}
+            </Droppable>
+          </DragDropContext>
         )}
         {deleteTaskModal.state && (
           <TaskDeleteModal
