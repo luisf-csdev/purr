@@ -7,8 +7,9 @@
 <div align="center">
     <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
     <img src="https://img.shields.io/badge/status-active-success.svg" />
-    <img src="https://img.shields.io/github/issues/luisf-csdev/purr" />
+    <img src="https://img.shields.io/github/license/luisf-csdev/purr" />
     <img src="https://img.shields.io/github/forks/luisf-csdev/purr" />
+    <img src="https://img.shields.io/github/stars/luisf-csdev/purr" />
 </div>
 
 <p align="center">A meownimalistic to-do list for funny daily task management. 📝✨</p>
@@ -33,8 +34,8 @@
 
 ## ⌨️ Hotkeys 
 - [x] `Enter`: Focus the new task box.
-- [x] `Esc`: Exit any pop-up window.
 - [x] `Del`: Confirm task deletion.
+- [x] `Esc`: Exit any pop-up window.
 - [x] `Double Click`: Edits the selected task.
 <br>
 
