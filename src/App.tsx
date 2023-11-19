@@ -15,6 +15,7 @@ import { TaskStats } from './components/TaskStats'
 import { TaskDeleteModal, TaskToDeleteType } from './components/TaskDeleteModal'
 
 import styles from './App.module.css'
+import { Footer } from './components/Footer'
 
 export function App() {
   const TASKS = 'tasks'
@@ -120,62 +121,65 @@ export function App() {
   }
 
   return (
-    <div>
+    <div className={styles.app}>
       <div className={styles.headerAndTaskAddWrapper}>
         <Header />
         <TaskAdd onTaskAdd={addTask} />
       </div>
       <div className={styles.statsAndTaskWrapper}>
-        <TaskStats total={totalTasks} completed={completedTasks} />
+        <div className="container">
+          <TaskStats total={totalTasks} completed={completedTasks} />
 
-        {tasks.length === 0 ? (
-          <TaskPlaceholder />
-        ) : (
-          <DragDropContext onDragEnd={handleOnDragEnd}>
-            <Droppable droppableId="tasks">
-              {(provided) => (
-                <div
-                  {...provided.droppableProps}
-                  ref={provided.innerRef}
-                  className={styles.taskList}
-                >
-                  {tasks.map((task, index) => (
-                    <Draggable
-                      key={task.id}
-                      draggableId={task.id}
-                      index={index}
-                    >
-                      {(provided) => (
-                        <div
-                          ref={provided.innerRef}
-                          {...provided.draggableProps}
-                          {...provided.dragHandleProps}
-                        >
-                          <TaskCard
-                            task={task}
-                            index={index}
-                            onTaskDelete={toggleDeleteTaskModal}
-                            onTaskToggle={toggleTask}
-                            onTaskEdit={editTask}
-                          />
-                        </div>
-                      )}
-                    </Draggable>
-                  ))}
-                  {provided.placeholder}
-                </div>
-              )}
-            </Droppable>
-          </DragDropContext>
-        )}
-        {deleteTaskModal.state && (
-          <TaskDeleteModal
-            onCloseTaskDeleteModal={toggleDeleteTaskModal}
-            onTaskDeleteConfirmation={deleteTask}
-            task={deleteTaskModal}
-          />
-        )}
+          {tasks.length === 0 ? (
+            <TaskPlaceholder />
+          ) : (
+            <DragDropContext onDragEnd={handleOnDragEnd}>
+              <Droppable droppableId="tasks">
+                {(provided) => (
+                  <main
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                    className={styles.taskList}
+                  >
+                    {tasks.map((task, index) => (
+                      <Draggable
+                        key={task.id}
+                        draggableId={task.id}
+                        index={index}
+                      >
+                        {(provided) => (
+                          <div
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                          >
+                            <TaskCard
+                              task={task}
+                              index={index}
+                              onTaskDelete={toggleDeleteTaskModal}
+                              onTaskToggle={toggleTask}
+                              onTaskEdit={editTask}
+                            />
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
+                    {provided.placeholder}
+                  </main>
+                )}
+              </Droppable>
+            </DragDropContext>
+          )}
+          {deleteTaskModal.state && (
+            <TaskDeleteModal
+              onCloseTaskDeleteModal={toggleDeleteTaskModal}
+              onTaskDeleteConfirmation={deleteTask}
+              task={deleteTaskModal}
+            />
+          )}
+        </div>
       </div>
+      <Footer />
     </div>
   )
 }

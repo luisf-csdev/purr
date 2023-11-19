@@ -13,11 +13,11 @@
     align-items: flex-start;
     gap: 4.8rem;
 
-    background: var(--gray-500);
+    background: var(--gray-600);
     padding-block: 1.6rem;
     padding-inline: 1.8rem;
 
-    border: 1px solid var(--gray-400);
+    border: 1px solid var(--gray-500);
     border-radius: 8px;
     box-shadow: 0px 2px 8px 0px #0000000f;
     cursor: grab;
@@ -26,7 +26,7 @@
 }
 
 .card.completed {
-    border-color: var(--gray-500);
+    border-color: var(--gray-600);
 }
 
 .task {
@@ -43,9 +43,11 @@
 
     min-height: 2rem;
     min-width: 2rem;
+    max-height: 2rem;
+    max-width: 2rem;
     background: transparent;
 
-    border: 2px solid var(--blue-400);
+    border: 2px solid var(--purple-700);
     border-radius: 50%;
     box-shadow: none;
 
@@ -53,7 +55,7 @@
 }
 
 .task .circle:hover {
-    border-color: var(--blue-700);
+    border-color: var(--purple-400);
     background: var(--gray-600);
 }
 
@@ -86,27 +88,36 @@
     text-decoration-line: line-through;
 }
 
-.delete {
+.action {
     display: flex;
     align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
-    background: transparent;
+.action button  {
+    display: flex;
+
     padding: 0.6rem;
-
     border-radius: 4px;
 
     transition: background-color 0.1s;
 }
 
-.delete:hover {
+.action button:hover  {
     background: var(--gray-400);
 }
 
-.delete svg {
+.action button svg {
     color: var(--gray-300);
     transition: color 0.1s;
 }
 
 .delete:hover svg {
     color: var(--red-400);
+}
+
+.edit:hover svg {
+    color: var(--purple-100);
 }

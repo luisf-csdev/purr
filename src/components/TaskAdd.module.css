@@ -8,9 +8,6 @@
     justify-content: center;
     gap: 0.8rem;
 
-    max-width: 70.4rem;
-    margin-inline: auto;
-
     transform: translateY(-50%);
 }
 
@@ -18,10 +15,10 @@
     display: flex;
     flex: 1;
 
-    background: var(--gray-500);
+    background: var(--gray-400);
     padding: 1.6rem;
 
-    border: 1px solid var(--gray-700);
+    border: 1px solid var(--gray-500);
     border-radius: 8px;
 
     transition: border 0.1s, box-shadow 0.1s;
@@ -37,8 +34,8 @@
     align-items: center;
     gap: 0.8rem;
 
-    background: var(--blue-700);
-    padding: 1.6rem;
+    background: var(--purple-700);
+    padding-inline: 3rem;
     font-size: var(--text-md);
     border-radius: 8px;
 
@@ -46,7 +43,7 @@
 }
 
 .addButton:not(:disabled):hover {
-    background: var(--blue-400);
+    background: var(--purple-400);
 }
 
 
@@ -56,6 +53,6 @@
 }
 
 .addButton svg {
-    height: 1.8rem;
-    width: 1.8rem;
+    height: 2.4rem;
+    width: 2.4rem;
 }

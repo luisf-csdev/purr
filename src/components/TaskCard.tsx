@@ -1,5 +1,5 @@
 import { ChangeEvent, KeyboardEvent, useState } from 'react'
-import { Check, Trash } from 'phosphor-react'
+import { Check, Pencil, Trash } from 'phosphor-react'
 
 import styles from './TaskCard.module.css'
 
@@ -36,11 +36,16 @@ export function TaskCard({
   }
 
   function handleEditTask() {
+    if (editedContent === '') {
+      setEditedContent(task.content)
+      return
+    }
+
     onTaskEdit(task.id, editedContent)
     setIsEditing(false)
   }
 
-  function handleDoubleClick() {
+  function handleStartEdit() {
     setIsEditing(true)
   }
 
@@ -58,7 +63,7 @@ export function TaskCard({
     <div className={`${styles.cardWrapper} ${index < 1 && styles.firstItem}`}>
       <div
         className={`${styles.card} ${task.isTaskDone && styles.completed}`}
-        onDoubleClick={handleDoubleClick}
+        onDoubleClick={handleStartEdit}
       >
         <div className={styles.task}>
           <button
@@ -86,9 +91,15 @@ export function TaskCard({
           )}
         </div>
 
-        <button onClick={handleDeleteTask} className={styles.delete}>
-          <Trash size={16} />
-        </button>
+        <div className={styles.action}>
+          <button onClick={handleStartEdit} className={styles.edit}>
+            <Pencil size={16} />
+          </button>
+
+          <button onClick={handleDeleteTask} className={styles.delete}>
+            <Trash size={16} />
+          </button>
+        </div>
       </div>
     </div>
   )
