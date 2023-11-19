@@ -16,9 +16,9 @@
 
 <h4 align="center">
     <a href="#-features">Features</a> •
-    <a href="#-how-it-works">How It Works</a> •
-    <a href="#try-it-yourself">Try It Out</a> •
-    <a href="#-excelsior-code--by-luís-felipe">Author</a>
+    <a href="#-hotkeys">Hotkeys</a> •
+    <a href="#start-your-meows">Try It Out</a> •
+    <a href="#excelsior-code--by-luís-felipe">Author</a>
 </h4>
 <br>
 
@@ -32,14 +32,15 @@
 - [x] Hotkeys for efficient task management.
 <br>
 
-## ⌨️ Hotkeys 
+## 👾 Hotkeys 
 - [x] `Enter`: Focus the new task box.
 - [x] `Del`: Confirm task deletion.
 - [x] `Esc`: Exit any pop-up window.
 - [x] `Double Click`: Edits the selected task.
 <br>
 
-## [🐈‍⬛ Start your meows 🐈‍⬛](https://purr-dot.web.app/)
+### 🐈‍⬛ 🐈‍⬛ 🐈‍⬛ 
+## [Start your meows](https://purr-dot.web.app/)
 <div align="center">
     <img alt="purr-pic" width="450rem" src="./github/purr-pic.png"><br>
     <img alt="purr-gif1" width="450rem" src="./github/purr-gif1.gif">
