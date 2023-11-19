@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    background: var(--gray-600);
+    padding-block: 3rem 5rem;
+    margin-top: 2rem;
+}
+
+address {
+    display: flex;
+    gap: 2rem;
+}
+
+.link svg {
+    height: 3rem;
+    width: 3rem;
+    transition: color 0.1s;
+    color: var(--gray-300);
+}
+
+.link svg:hover {
+    color: var(--purple-400);
+}
+
+.footer strong {
+    font-size: var(--text-md);
+    color: var(--gray-300);
+}

@@ -1,10 +1,16 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .headerAndTaskAddWrapper {
     position: relative;
 }
 
 .statsAndTaskWrapper {
-    max-width: 70.4rem;
-    margin-inline: auto;
+    flex: 1;
+    width: 100%;
 }
 
 .taskList {

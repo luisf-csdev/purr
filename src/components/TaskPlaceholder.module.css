@@ -27,11 +27,11 @@
 .placeholder svg {
     width: 5.6rem;
     height: 5.6rem;
-    color: var(--gray-400);
+    color: var(--gray-300);
 }
 
 .placeholderText {
     text-align: center;
-    color: var(--gray-300);
+    color: var(--gray-200);
     line-height: var(--leading);
 }

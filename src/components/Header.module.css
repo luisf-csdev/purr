@@ -1,14 +1,15 @@
 .header {
-    background: var(--gray-700);
+    background: var(--gray-600);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1rem;
+
     padding-block: 7.2rem;
 }
 
 .icon {
-    width: 2.2rem;
+    width: 5rem;
 }
 
 .title {
@@ -16,10 +17,15 @@
     font-weight: 900;
 }
 
-.titleBlue {
-    color: var(--blue-400);
+.title span {
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: var(--purple-900);
 }
 
-.titlePurple {
+.titleLight {
+    color: var(--purple-100);
+}
+
+.titleDark {
     color: var(--purple-700)
 }

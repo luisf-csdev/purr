@@ -1,7 +1,7 @@
 @keyframes showModal {
     0% {
         opacity: 0;
-        transform: translateX(1rem);
+        transform: translateY(2rem);
     }
 
     100% {
@@ -16,9 +16,13 @@
     top: 0;
     left: 0;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100%;
     background: var(--translucid);
+}
 
+.modalWrapper {
+    position: relative;
+    width: 100%;
 }
 
 .modal {
@@ -32,12 +36,12 @@
     gap: 4.5rem;
 
     max-width: 50rem;
-    background: var(--gray-500);
+    background: var(--gray-600);
     padding-inline: 3rem;
     padding-block: 3rem 3.6rem;
     margin: auto;
 
-    border: 1px solid var(--gray-400);
+    border: 2px solid var(--gray-500);
     border-radius: 8px;
     box-shadow: 0px 2px 8px 0px #0000000f;
 
@@ -54,7 +58,6 @@
 .header h2 {
     font-size: 2.8rem;
     color: var(--red-400);
-    opacity: 0.7;
 }
 
 .cancelIcon {
@@ -83,7 +86,7 @@
 .text span {
     display: block;
 
-    background: var(--gray-600);
+    background: var(--gray-500);
     padding: 1rem 2rem;
     margin-inline: auto;
     margin-top: 2rem;
@@ -108,27 +111,31 @@
 
 .control button {
     padding: 0.8rem 1.6rem;
+    color: var(--gray-100);
     border-radius: 8px;
-    background: var(--gray-600);
-    transition: color 0.1s, background-color 0.1s;
+    transition: opacity 0.1s, background-color 0.1s;
     box-shadow: none;
 }
 
 .control .cancel {
-    color: var(--gray-100);
-    background: var(--purple-700);
-}
-
-.control .cancel:hover {
     background: var(--purple-400);
 }
 
+.control .cancel:hover {
+    background: var(--purple-700);
+}
+
 .control .delete {
-    color: var(--gray-300);
-    background: var(--gray-400);
+    background: var(--red-400);
+    opacity: 0.5;
 }
 
 .control .delete:hover {
-    color: var(--gray-100);
-    background: var(--red-400);
+    opacity: 1;
+}
+
+@media (max-width: 1023px) {
+    .modalWrapper {
+        margin: 2rem;
+    }
 }

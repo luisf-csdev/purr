@@ -43,51 +43,55 @@ export function TaskDeleteModal({
       }
     }
 
+    document.body.classList.add('modal-open')
     document.addEventListener('mousedown', handleClickOutside)
     window.addEventListener('keydown', handleKeyDown)
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
       window.removeEventListener('keydown', handleKeyDown)
+      document.body.classList.remove('modal-open')
     }
   }, [handleCloseModal])
 
   return (
     <div className={styles.curtain}>
-      <div className={styles.modal} ref={modalRef}>
-        <header className={styles.header}>
-          <h2 className={styles.title}>Delete Task</h2>
+      <div className={styles.modalWrapper}>
+        <div className={styles.modal} ref={modalRef}>
+          <header className={styles.header}>
+            <h2 className={styles.title}>Delete Meow</h2>
 
-          <button
-            type="button"
-            onClick={handleCloseModal}
-            className={styles.cancelIcon}
-          >
-            <X />
-          </button>
-        </header>
+            <button
+              type="button"
+              onClick={handleCloseModal}
+              className={styles.cancelIcon}
+            >
+              <X />
+            </button>
+          </header>
 
-        <p className={styles.text}>
-          Are you <strong>sure</strong> to delete this task?
-          <span>{task.content}</span>
-        </p>
+          <p className={styles.text}>
+            Are you <strong>sure</strong> to delete this meow?
+            <span>{task.content}</span>
+          </p>
 
-        <div className={styles.control}>
-          <button
-            onClick={handleCloseModal}
-            type="button"
-            className={styles.cancel}
-          >
-            Cancel
-          </button>
+          <div className={styles.control}>
+            <button
+              onClick={handleCloseModal}
+              type="button"
+              className={styles.cancel}
+            >
+              Cancel
+            </button>
 
-          <button
-            type="button"
-            className={styles.delete}
-            onClick={handleDeleteConfirmation}
-          >
-            Delete
-          </button>
+            <button
+              type="button"
+              className={styles.delete}
+              onClick={handleDeleteConfirmation}
+            >
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
-import { PlusCircle } from 'phosphor-react'
-import styles from './TaskAdd.module.css'
 import { ChangeEvent, FormEvent, useState } from 'react'
+import { PawPrint } from 'phosphor-react'
+
+import styles from './TaskAdd.module.css'
 
 interface TaskAddType {
   onTaskAdd: (content: string) => void
@@ -20,23 +21,22 @@ export function TaskAdd({ onTaskAdd }: TaskAddType) {
   }
 
   return (
-    <form className={styles.addTask}>
+    <form className={`${styles.addTask} container`} onSubmit={handleTaskAdd}>
       <input
         className={styles.addInput}
         type="text"
         value={newTaskContent}
         onChange={handleNewTaskContentChange}
-        placeholder="Add a new task"
+        placeholder="Put your meow here"
+        autoFocus
       />
 
       <button
         disabled={!newTaskContent}
-        onClick={handleTaskAdd}
         className={styles.addButton}
         type="submit"
       >
-        <span>Create</span>
-        <PlusCircle />
+        <PawPrint />
       </button>
     </form>
   )
