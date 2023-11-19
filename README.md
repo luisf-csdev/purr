@@ -18,6 +18,7 @@
     <a href="#-features">Features</a> •
     <a href="#-hotkeys">Hotkeys</a> •
     <a href="#start-your-meows">Try It Out</a> •
+    <a href="#-credits">Credits</a> •
     <a href="#excelsior-code--by-luís-felipe">Author</a>
 </h4>
 <br>
@@ -86,9 +87,13 @@ pnpm dev
     <img alt="Node.js" height="50rem" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
     <img alt="Vite" height="50rem" src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" />
 </div>
-<br>
+<be>
 
-##
+## 👤 Credits
+Challenge proposed by [Rocketseat](https://www.rocketseat.com.br/) 🚀
+
+UI inspired by the design of [Millena Martins](https://www.linkedin.com/in/millenakmartins/) 🎨
+## 
 
 <div align="center">
 
