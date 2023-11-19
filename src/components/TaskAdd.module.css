@@ -1,0 +1,61 @@
+.addTask {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+
+    max-width: 70.4rem;
+    margin-inline: auto;
+
+    transform: translateY(-50%);
+}
+
+.addInput {
+    display: flex;
+    flex: 1;
+
+    background: var(--gray-500);
+    padding: 1.6rem;
+
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+
+    transition: border 0.1s, box-shadow 0.1s;
+}
+
+.addInput:focus {
+    border-color: transparent;
+}
+
+.addButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    background: var(--blue-700);
+    padding: 1.6rem;
+    font-size: var(--text-md);
+    border-radius: 8px;
+
+    transition: background-color 0.1s;
+}
+
+.addButton:not(:disabled):hover {
+    background: var(--blue-400);
+}
+
+
+.addButton:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+.addButton svg {
+    height: 1.8rem;
+    width: 1.8rem;
+}

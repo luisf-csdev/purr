@@ -1,0 +1,31 @@
+.stats {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 9.2rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    font-size: var(--text-md);
+}
+
+.stat .blue {
+    color: var(--blue-400);
+}
+
+.stat .purple {
+    color: var(--purple-400);
+}
+
+.stat .count {
+    background: var(--gray-400);
+    padding: 0.2rem 0.8rem;
+    border-radius: 999px;
+
+    color: var(--gray-200);
+    font-size: var(--text-sm);
+}

@@ -1,0 +1,110 @@
+@keyframes showCard  {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4.8rem;
+
+    background: var(--gray-500);
+    padding-block: 1.6rem;
+    padding-inline: 1.8rem;
+
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #0000000f;
+    transition: border 0.1s;
+    animation: showCard 0.3s ease-in-out;
+}
+
+.card.completed {
+    border-color: var(--gray-500);
+}
+
+.task {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+.task .circle {
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 2rem;
+    min-width: 2rem;
+    background: transparent;
+
+    border: 2px solid var(--blue-400);
+    border-radius: 50%;
+    box-shadow: none;
+
+    transition: border 0.1s, background-color 0.1s
+}
+
+.task .circle:hover {
+    border-color: var(--blue-700);
+    background: var(--gray-600);
+}
+
+.card.completed .task .circle {
+    background: var(--purple-700);
+    border-color: transparent;
+}
+
+.card.completed .task .circle:hover {
+    background: var(--purple-400);
+}
+
+.task .circle svg {
+    width: 90%;
+    height: 90%;
+}
+
+.task p {
+    display: flex;
+    font-size: var(--text-md);
+    line-height: var(--leading);
+}
+
+.card.completed .task p {
+    color: var(--gray-300);
+    text-decoration-line: line-through;
+}
+
+.delete {
+    display: flex;
+    align-self: flex-start;
+
+    background: transparent;
+    padding: 0.6rem;
+
+    border-radius: 4px;
+
+    transition: background-color 0.1s;
+}
+
+.delete:hover {
+    background: var(--gray-400);
+}
+
+.delete svg {
+    color: var(--gray-300);
+    transition: color 0.1s;
+}
+
+.delete:hover svg {
+    color: var(--red-400);
+}

@@ -1,0 +1,25 @@
+.header {
+    background: var(--gray-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding-block: 7.2rem;
+}
+
+.icon {
+    width: 2.2rem;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.titleBlue {
+    color: var(--blue-400);
+}
+
+.titlePurple {
+    color: var(--purple-700)
+}
