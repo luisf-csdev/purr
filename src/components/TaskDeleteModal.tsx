@@ -22,9 +22,9 @@ export function TaskDeleteModal({
 }: TaskAddType) {
   const modalRef = useRef<HTMLDivElement>(null)
 
-  function handleDeleteConfirmation() {
+  const handleDeleteConfirmation = useCallback(() => {
     onTaskDeleteConfirmation(task.id)
-  }
+  }, [onTaskDeleteConfirmation, task.id])
 
   const handleCloseModal = useCallback(() => {
     onCloseTaskDeleteModal()
@@ -34,6 +34,9 @@ export function TaskDeleteModal({
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
         handleCloseModal()
+      }
+      if (event.key === 'Delete') {
+        handleDeleteConfirmation()
       }
     }
 
@@ -52,7 +55,7 @@ export function TaskDeleteModal({
       window.removeEventListener('keydown', handleKeyDown)
       document.body.classList.remove('modal-open')
     }
-  }, [handleCloseModal])
+  }, [handleCloseModal, handleDeleteConfirmation])
 
   return (
     <div className={styles.curtain}>
