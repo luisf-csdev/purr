@@ -1,0 +1,134 @@
+@keyframes showModal {
+    0% {
+        opacity: 0;
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.curtain {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: var(--translucid);
+
+}
+
+.modal {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    max-width: 50rem;
+    background: var(--gray-500);
+    padding-inline: 3rem;
+    padding-block: 3rem 3.6rem;
+    margin: auto;
+
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #0000000f;
+
+    animation: showModal 0.4s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h2 {
+    font-size: 2.8rem;
+    color: var(--red-400);
+    opacity: 0.7;
+}
+
+.cancelIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancelIcon svg {
+    height: 2rem;
+    width: 2rem;
+    color: var(--gray-200);
+
+    transition: color 0.1s;
+}
+
+.cancelIcon:hover svg {
+    color: var(--gray-300);
+}
+
+.text {
+    text-align: center;
+    color: var(--gray-100);
+}
+
+.text span {
+    display: block;
+
+    background: var(--gray-600);
+    padding: 1rem 2rem;
+    margin-inline: auto;
+    margin-top: 2rem;
+
+    width: fit-content;
+    max-width: 90%;
+
+    color: var(--gray-200);
+    font-size: var(--text-md);
+    font-weight: 700;
+    text-align: left;
+    line-height: var(--leading);
+
+    border-radius: 8px;
+}
+
+.control {
+    display: flex;
+    align-self: flex-end;
+    gap: 2rem;
+}
+
+.control button {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    background: var(--gray-600);
+    transition: color 0.1s, background-color 0.1s;
+    box-shadow: none;
+}
+
+.control .cancel {
+    color: var(--gray-100);
+    background: var(--purple-700);
+}
+
+.control .cancel:hover {
+    background: var(--purple-400);
+}
+
+.control .delete {
+    color: var(--gray-300);
+    background: var(--gray-400);
+}
+
+.control .delete:hover {
+    color: var(--gray-100);
+    background: var(--red-400);
+}
