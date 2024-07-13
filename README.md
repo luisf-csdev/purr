@@ -43,9 +43,9 @@
 ### 🐈‍⬛ 🐈‍⬛ 🐈‍⬛ 
 ## [Start your meows](https://purr-dot.web.app/)
 <div align="center">
-    <img alt="purr-pic" width="450rem" src="./github/purr-pic.png"><br>
-    <img alt="purr-gif1" width="450rem" src="./github/purr-gif1.gif">
-    <img alt="purr-gif2" width="160rem" src="./github/purr-gif2.gif">
+    <img alt="purr-pic" width="450rem" src="./.github/assets/purr-pic.png"><br>
+    <img alt="purr-gif1" width="450rem" src="./.github/assets/purr-gif1.gif">
+    <img alt="purr-gif2" width="160rem" src="./.github/assets/purr-gif2.gif">
 </div>
 
 ## 
