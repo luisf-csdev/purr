@@ -1,5 +1,5 @@
 .header {
-    background: var(--gray-600);
+    background: var(--secondary-600);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,19 +13,65 @@
 }
 
 .title {
+    position: relative;
+
     font-size: 4rem;
     font-weight: 900;
 }
 
 .title span {
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: var(--purple-900);
+    -webkit-text-stroke-width: var(--text-stroke-width); 
+    -webkit-text-stroke-color: var(--text-stroke-color);
 }
 
 .titleLight {
-    color: var(--purple-100);
+    color: var(--primary-100);
 }
 
 .titleDark {
-    color: var(--purple-700)
+    color: var(--primary-700)
 }
+
+
+.cherryVersion {
+    position: absolute;
+    left: -20%;
+    top: 100%;
+
+    color: var(--primary-100);
+
+    font-size: 1.6rem;
+    letter-spacing: .15em; 
+    white-space: nowrap;
+
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--primary-100);
+    margin: 0 auto;
+
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { 
+        width: 0ch;
+    }
+
+    to { 
+        width: 23ch;
+    }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: var(--primary-100); 
+    }
+  }

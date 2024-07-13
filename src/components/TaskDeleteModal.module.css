@@ -36,12 +36,12 @@
     gap: 4.5rem;
 
     max-width: 50rem;
-    background: var(--gray-600);
+    background: var(--secondary-600);
     padding-inline: 3rem;
     padding-block: 3rem 3.6rem;
     margin: auto;
 
-    border: 2px solid var(--gray-500);
+    border: 2px solid var(--secondary-500);
     border-radius: 8px;
     box-shadow: 0px 2px 8px 0px #0000000f;
 
@@ -69,24 +69,28 @@
 .cancelIcon svg {
     height: 2rem;
     width: 2rem;
-    color: var(--gray-200);
+    color: var(--secondary-200);
 
     transition: color 0.1s;
 }
 
 .cancelIcon:hover svg {
-    color: var(--gray-300);
+    color: var(--secondary-300);
 }
 
 .text {
     text-align: center;
-    color: var(--gray-100);
+    color: var(--secondary-100);
+}
+
+.text * {
+    font-weight: var(--strong-font-weight);
 }
 
 .text span {
     display: block;
 
-    background: var(--gray-500);
+    background: var(--secondary-500);
     padding: 1rem 2rem;
     margin-inline: auto;
     margin-top: 2rem;
@@ -94,7 +98,7 @@
     width: fit-content;
     max-width: 90%;
 
-    color: var(--gray-200);
+    color: var(--secondary-200);
     font-size: var(--text-md);
     font-weight: 700;
     text-align: left;
@@ -111,18 +115,18 @@
 
 .control button {
     padding: 0.8rem 1.6rem;
-    color: var(--gray-100);
+    color: var(--white);
     border-radius: 8px;
     transition: opacity 0.1s, background-color 0.1s;
     box-shadow: none;
 }
 
 .control .cancel {
-    background: var(--purple-400);
+    background: var(--primary-400);
 }
 
 .control .cancel:hover {
-    background: var(--purple-700);
+    background: var(--primary-700);
 }
 
 .control .delete {

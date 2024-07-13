@@ -18,7 +18,7 @@
     padding-block: 2.4rem;
     padding-block: 6.4rem;
 
-    border-top: 1px solid var(--gray-400);
+    border-top: 1px solid var(--secondary-400);
     border-radius: 8px;
 
     animation: showPlaceholder 0.4s;
@@ -27,11 +27,15 @@
 .placeholder svg {
     width: 5.6rem;
     height: 5.6rem;
-    color: var(--gray-300);
+    color: var(--secondary-300);
 }
 
 .placeholderText {
     text-align: center;
-    color: var(--gray-200);
+    color: var(--secondary-200);
     line-height: var(--leading);
+}
+
+.placeholderText strong {
+    font-weight: var(--strong-font-weight);
 }
