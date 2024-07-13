@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { v4 as uuid } from 'uuid'
 import {
   DragDropContext,
@@ -16,8 +16,15 @@ import { TaskDeleteModal, TaskToDeleteType } from './components/TaskDeleteModal'
 
 import styles from './App.module.css'
 import { Footer } from './components/Footer'
+import { useThemeContext } from './context/ThemeContext'
 
 export function App() {
+  const { setThemeSettings } = useThemeContext()
+
+  useEffect(() => {
+    setThemeSettings()
+  }, [setThemeSettings])
+
   const TASKS = 'tasks'
   const savedTasksItem = localStorage.getItem(TASKS)
 
@@ -124,6 +131,7 @@ export function App() {
     <div className={styles.app}>
       <div className={styles.headerAndTaskAddWrapper}>
         <Header />
+
         <TaskAdd onTaskAdd={addTask} />
       </div>
       <div className={styles.statsAndTaskWrapper}>
@@ -179,6 +187,7 @@ export function App() {
           )}
         </div>
       </div>
+
       <Footer />
     </div>
   )

@@ -1,13 +1,16 @@
 import { GithubLogo, LinkedinLogo } from 'phosphor-react'
 import styles from './Footer.module.css'
+import { useThemeContext } from '../context/ThemeContext'
 
 export function Footer() {
+  const { cherry } = useThemeContext()
+
   return (
     <footer className={styles.footer}>
       <address>
         <a
           target="_blank"
-          rel="noreferrer nooper"
+          rel="noreferrer noopener"
           className={styles.link}
           href="https://github.com/luisf-csdev/"
         >
@@ -15,14 +18,17 @@ export function Footer() {
         </a>
         <a
           target="_blank"
-          rel="noreferrer nooper"
+          rel="noreferrer noopener"
           className={styles.link}
           href="https://www.linkedin.com/in/luisf-csdev/"
         >
           <LinkedinLogo />
         </a>
       </address>
-      <strong>Made with 💜 by Luís Felipe</strong>
+      <strong>
+        Made with <span>{cherry ? '🩷' : '💜'}</span> by {''}
+        <span>{cherry ? 'Pituxo' : 'Luís Felipe'} </span>
+      </strong>
     </footer>
   )
 }

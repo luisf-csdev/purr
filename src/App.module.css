@@ -16,3 +16,29 @@
 .taskList {
     padding-block: 1.2rem 2.4rem;
 }
+
+
+
+.primary-100 {
+    padding: 10rem;
+    width: fit-content;
+    background: var(--primary-100);
+}
+
+.primary-400 {
+    padding: 10rem;
+    width: fit-content;
+    background: var(--primary-400);
+}
+
+.primary-700 {
+    padding: 10rem;
+    width: fit-content;
+    background: var(--primary-700);
+}
+
+.primary-900 {
+    padding: 10rem;
+    width: fit-content;
+    background: var(--primary-900);
+}

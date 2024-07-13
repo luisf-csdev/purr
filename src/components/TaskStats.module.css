@@ -13,19 +13,23 @@
     font-size: var(--text-md);
 }
 
+.stat strong {
+    font-weight: var(--strong-font-weight);
+}
+
 .stat .light {
-    color: var(--purple-400);
+    color: var(--primary-400);
 }
 
 .stat .dark {
-    color: var(--purple-700);
+    color: var(--primary-700);
 }
 
 .stat .count {
-    background: var(--gray-400);
+    background: var(--secondary-400);
     padding: 0.2rem 0.8rem;
     border-radius: 999px;
 
-    color: var(--gray-200);
+    color: var(--secondary-200);
     font-size: var(--text-sm);
 }

@@ -15,10 +15,10 @@
     display: flex;
     flex: 1;
 
-    background: var(--gray-400);
+    background: var(--secondary-400);
     padding: 1.6rem;
 
-    border: 1px solid var(--gray-500);
+    border: 1px solid var(--secondary-500);
     border-radius: 8px;
 
     transition: border 0.1s, box-shadow 0.1s;
@@ -34,16 +34,18 @@
     align-items: center;
     gap: 0.8rem;
 
-    background: var(--purple-700);
+    background: var(--primary-700);
     padding-inline: 3rem;
     font-size: var(--text-md);
     border-radius: 8px;
+
+    color: var(--white);
 
     transition: background-color 0.1s;
 }
 
 .addButton:not(:disabled):hover {
-    background: var(--purple-400);
+    background: var(--primary-400);
 }
 
 
